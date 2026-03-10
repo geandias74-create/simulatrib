@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simula Trib</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+            margin-left: 10px;
+        }
+
+        .back video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        header {
+            position: fixed;
+            top: 2px;
+            width: 100%;
+            height: 10vh;
+            background: #003366;
+            padding: 0;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15vw;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-top: -5%;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding-top: 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #dad8d8c2;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .objetivo img {
+            display: block;
+            margin: auto;
+            height: auto;
+            align-items: center;
+        }
+
+
+        .contribuicao img {
+            display: block;
+            margin: auto;
+            height: auto;
+            align-items: center;
+            margin-top: 10%;
+        }
+
+        .historico img {
+            display: block;
+            margin: auto;
+            height: auto;
+            align-items: center;
+            margin-top: 10%;
+        }
+
+        .calculadora img {
+            display: block;
+            margin: auto;
+            height: 200px;
+            align-items: center;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 3vh;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .spacer {
+            height: 73px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background: #003366;
+            color: white;
+        }
+
+        footer {
+            background: #003366;
+            color: #fff;
+            padding: 25px 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back">
+        <video src="./midia/videos/video1.mp4" loop muted autoplay></video>
+    </div>
+
+    <header>
+
+        <div class="logo">
+            <img src="./midia/imagens/logo.png" alt="">
+        </div>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#simulacao">Simulação</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="sobre" class="container">
+            <h1>1. Sobre a Ferramenta</h1>
+
+            <section>
+                <div class="objetivo">
+                    <img src="./midia/imagens/objetivo.png" alt="">
+                </div>
+                <h2>1.1. Objetivo</h2>
+                <p>
+                    Analisar os impactos econômicos e financeiros da Reforma Tributária sobre o Consumo no fluxo de
+                    caixa operacional das empresas, com foco no longo do período de transição (2026–2033), considerando
+                    diferentes perfis de faturamento, estruturas de custos e cenários de alíquotas.
+                </p>
+            </section>
+
+            <section>
+                <div class="contribuicao">
+                    <img src="./midia/imagens/contribuição.png" alt="">
+                </div>
+                <h2>1.2. Contribuição Prática para Sociedade</h2>
+                <p>
+                    Facilitar a compreensão e a tomada de decisão dos usuários da informação contábil sobre a gestão de
+                    caixa em um contexto de transição normativa.
+                </p>
+            </section>
+
+            <section>
+                <div class="historico">
+                    <img src="./midia/imagens/tempo.png" alt="">
+                </div>
+                <h2>1.3. Breve Resumo Sobre as Etapas da Reforma</h2>
+
+                <!-- 1.3.1. Tributação atual -->
+                <h3>1.3.1. Tributação atual de PIS, COFINS, ICMS e ISS (empresas no regime não‑cumulativo — Pará/Belém)
+                </h3>
+
+                <p>
+                    No Brasil, empresas que adotam o regime não‑cumulativo apuram créditos nas etapas anteriores da
+                    cadeia produtiva para reduzir o imposto a pagar, resultando em maior neutralidade tributária.
+                </p>
+
+                <h4>PIS e COFINS</h4>
+                <p>
+                    No regime não‑cumulativo, aplicam‑se alíquotas federais sobre a receita bruta de:
+                    <br>PIS: 1,65%
+                    <br>COFINS: 7,60%
+                </p>
+                <p>
+                    Esses tributos permitem a apropriação de créditos sobre insumos, reduzindo a carga efetiva de
+                    impostos sobre o consumo final.
+                </p>
+
+                <h4>ICMS (Pará)</h4>
+                <p>
+                    O Imposto sobre Circulação de Mercadorias e Serviços é um tributo estadual que incide sobre a venda
+                    de mercadorias e alguns serviços.
+                </p>
+                <p>
+                    No estado do Pará, a alíquota interna típica é 19% das operações internas.
+                </p>
+
+                <h4>ISS (Belém)</h4>
+                <p>
+                    O Imposto sobre Serviços de Qualquer Natureza é devido ao município sobre serviços prestados.
+                </p>
+                <p>
+                    Em Belém (PA), a alíquota normalmente aplicada pode atingir 5% sobre o valor dos serviços.
+                </p>
+
+                <p>
+                    Esses tributos são cobrados separadamente pelas esferas federal (PIS/COFINS), estadual (ICMS) e
+                    municipal (ISS), gerando um sistema complexo de apuração e créditos.
+                </p>
+
+                <!-- 1.3.2. Mudança tributária -->
+                <h3>1.3.2. Mudança tributária prevista na Reforma — transição CBS e IBS (2026–2032)</h3>
+
+                <p>
+                    A reforma tributária em curso no Brasil propõe a substituição dos tributos atuais por dois grandes
+                    tributos sobre o valor agregado (IVA): CBS na esfera federal e IBS nos estados e municípios, com
+                    transição gradual de 2026 a 2033.
+                </p>
+
+                <h4>2026 — ano de teste</h4>
+                <p>
+                    Neste ano, os novos tributos começam a ser testados:
+                    <br>CBS: alíquota de 0,9%
+                    <br>IBS: alíquota de 0,1%
+                </p>
+                <p>
+                    Esses valores servem para calibrar o sistema e podem ser compensados com o PIS e a COFINS
+                    existentes.
+                </p>
+
+                <h4>2027 — extinção de PIS e COFINS</h4>
+                <p>
+                    O PIS e a COFINS são extintos definitivamente.
+                    <br>A CBS passa a ser cobrada pela alíquota integral definida por lei.
+                    <br>O IBS permanece em taxa simbólica para testes.
+                </p>
+
+                <h4>2029–2032 — transição de ICMS/ISS para IBS</h4>
+                <p>
+                    A reforma prevê a redução gradual das alíquotas de ICMS e ISS enquanto o IBS cresce
+                    proporcionalmente:
+                    <br>2029: redução de 10% nas alíquotas do ICMS/ISS e aumento de 10% no IBS.
+                    <br>2030: redução de 20% no ICMS/ISS e aumento de 20% do IBS.
+                    <br>2031: redução de 30% no ICMS/ISS e aumento de 30% no IBS.
+                    <br>2032: redução de 40% no ICMS/ISS; o IBS continua a crescer conforme o calendário legal antes de
+                    sua alíquota cheia.
+                </p>
+                <p>
+                    Essa transição progressiva permite ajuste do sistema sem rupturas bruscas de arrecadação.
+                </p>
+
+                <!-- 1.3.3. CBS e IBS consolidados -->
+                <h3>1.3.3. CBS e IBS consolidados: alíquotas cheias e o novo IVA Dual</h3>
+
+                <h4>CBS — Contribuição sobre Bens e Serviços</h4>
+                <p>
+                    Substitui PIS, COFINS e IPI (federais). Aplicada de forma ampla sobre bens e serviços com uma única
+                    alíquota federal referência que será fixada por lei complementar para manter a arrecadação atual.
+                    Seu papel é simples: tributar o valor agregado nacionalmente com crédito em todas as etapas.
+                </p>
+
+                <h4>IBS — Imposto sobre Bens e Serviços</h4>
+                <p>
+                    Substitui ICMS (estadual) e ISS (municipal) gradualmente até 2033.
+                    O IBS será de competência estadual/municipal e também baseado no valor agregado, permitindo crédito
+                    total.
+                    A alíquota de referência ainda está em discussão, mas há expectativas de que em cenários de
+                    referência ela fique em uma faixa superior a 17%, combinada entre estados e municípios.
+                </p>
+
+                <h4>Imposto sobre Valor Adicionado Dual</h4>
+                <p>
+                    Essa estrutura — com CBS no nível federal e IBS no subnacional — representa um IVA abrangente que
+                    unifica tributos dispersos, com maior neutralidade e alinhamento ao padrão internacional de IVA
+                    (valor agregado não cumulativo).
+                    Esse modelo visa reduzir complexidade, eliminar a cumulatividade dos tributos atuais e combinar
+                    arrecadação eficiente com menos distorções econômicas.
+                </p>
+            </section>
+        </section>
+
+        <section id="simulacao" class="container">
+
+            <div class="calculadora">
+                <img src="./midia/imagens/calculadora.png" alt="">
+            </div>
+
+            <h1>2. Simulação de Impactos da Reforma Tributária Sobre o Consumo (2026 – 2033)</h1>
+
+            <h2>Dados Anuais da Empresa</h2>
+
+            <label>Tipo de Faturamento</label>
+            <select id="tipo">
+                <option value="vendas">Comércio</option>
+                <option value="servicos">Serviços</option>
+            </select>
+
+            <label>Receita Bruta (R$)</label>
+            <input type="number" id="receita" value="100000">
+
+            <label>Custos Operacionais (R$)</label>
+            <input type="number" id="custos" value="60000">
+
+            <label>Despesas Essenciais (R$)</label>
+            <input type="number" id="despesas" value="10000">
+
+            <h2>Alíquotas Estimadas</h2>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+
+                <!-- CBS -->
+                <div>
+                    <label>CBS (2027)</label>
+                    <select id="cbs_2027">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+
+                    <label>CBS (2028)</label>
+                    <select id="cbs_2028">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+
+                    <label>CBS (2029)</label>
+                    <select id="cbs_2029">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+
+                    <label>CBS (2030)</label>
+                    <select id="cbs_2030">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+
+                    <label>CBS (2031)</label>
+                    <select id="cbs_2031">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+
+                    <label>CBS (2032)</label>
+                    <select id="cbs_2032">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+
+                    <label>CBS (2033)</label>
+                    <select id="cbs_2033">
+                        <option value="0.085">8,5%</option>
+                        <option value="0.095" selected>9,5%</option>
+                        <option value="0.100">10,0%</option>
+                    </select>
+                </div>
+
+                <!-- IBS -->
+                <div>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+
+                    <label>IBS (2029)</label>
+                    <select id="ibs_2029">
+                        <option value="0.175" selected>17,5%</option>
+                        <option value="0.185">18,5%</option>
+                    </select>
+
+                    <label>IBS (2030)</label>
+                    <select id="ibs_2030">
+                        <option value="0.175" selected>17,5%</option>
+                        <option value="0.185">18,5%</option>
+                    </select>
+
+                    <label>IBS (2031)</label>
+                    <select id="ibs_2031">
+                        <option value="0.175" selected>17,5%</option>
+                        <option value="0.185">18,5%</option>
+                    </select>
+
+                    <label>IBS (2032)</label>
+                    <select id="ibs_2032">
+                        <option value="0.175" selected>17,5%</option>
+                        <option value="0.185">18,5%</option>
+                    </select>
+
+                    <label>IBS (2033)</label>
+                    <select id="ibs_2033">
+                        <option value="0.175" selected>17,5%</option>
+                        <option value="0.185">18,5%</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button onclick="simular()">Simular Cenários</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ano</th>
+                        <th>ICMS / ISS Líquido (R$)</th>
+                        <th>PIS/COFINS<br>Líquido (R$)</th>
+                        <th>IBS<br>Líquido (R$)</th>
+                        <th>CBS<br>Líquido (R$)</th>
+                        <th>Tributos Totais (R$)</th>
+                        <th>Fluxo de Caixa Operacional (R$)</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <p><strong>Por:</strong> Cledson Gean Dias Guimarães | 📧 e-mail: geandias74@gmail.com</p>
+        <p> Simula Trib | 2026 | © Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    function calcularTributos(ano, receita, custos, despesas, tipo, cbsAno, ibsAno) {
+
+        let icms = tipo === "vendas" ? 0.19 : 0;
+        let iss = tipo === "servicos" ? 0.05 : 0;
+
+        let pis = 0, cofins = 0, ibs = 0, cbs = 0;
+
+        if (ano === 2025) {
+            pis = 0.0165;
+            cofins = 0.076;
+        }
+
+        if (ano === 2026) {
+            pis = 0.0165;
+            cofins = 0.076;
+            ibs = 0.001;
+            cbs = 0.009;
+        }
+
+        if (ano >= 2027 && ano <= 2028) {
+            ibs = 0.001;
+            cbs = cbsAno;
+        }
+
+        if (ano >= 2029 && ano <= 2032) {
+            let fator = (ano - 2028) * 0.10;
+            let baseIBS = (receita - custos - despesas);
+
+            ibs = (ibsAno * fator);
+            icms *= (1 - fator);
+            iss *= (1 - fator);
+            cbs = cbsAno;
+        }
+
+        if (ano === 2033) {
+            ibs = ibsAno;
+            icms = 0;
+            iss = 0;
+            cbs = cbsAno;
+        }
+
+        const debICMS_ISS = receita * (icms + iss);
+        const debPIS = [receita - (receita * 0.19)] * pis;
+        const debCOFINS = [receita - (receita * 0.19)] * cofins;
+        const debIBS = receita * ibs;
+        const debCBS = receita * cbs;
+
+        const baseCred = custos + despesas;
+
+        const credPIS = baseCred * pis;
+        const credCOFINS = baseCred * cofins;
+        const credICMS = baseCred * icms;
+        const credIBS = baseCred * ibs;
+        const credCBS = baseCred * cbs;
+
+        const pisCofinsLiquido = (debPIS + debCOFINS) - (credPIS + credCOFINS);
+        const icmsissLiquido = debICMS_ISS - credICMS;
+
+        let ibsLiquido = debIBS - credIBS;
+
+        if (tipo === "servicos") {
+            if (ano === 2025) {
+                ibsLiquido = 0;
+            }
+
+            if (ano === 2026) {
+                ibsLiquido = 0.001 * (receita - baseCred);
+            }
+
+            if (ano >= 2029) {
+                const redutores = { 2029: 0.90, 2030: 0.80, 2031: 0.70, 2032: 0.60, 2033: 0.00 };
+                ibsLiquido = [(1 - redutores[ano]) * ibsAno] * (receita - baseCred);
+            }
+        }
+
+        const cbsLiquido = debCBS - credCBS;
+        let totalTributos = icmsissLiquido + pisCofinsLiquido + ibsLiquido + cbsLiquido;
+
+        if (ano === 2026) {
+            totalTributos = icmsissLiquido + pisCofinsLiquido;
+        }
+
+        return { icms_iss: icmsissLiquido, pis_cofins: pisCofinsLiquido, ibs: ibsLiquido, cbs: cbsLiquido, total: totalTributos };
+    }
+
+    function simular() {
+
+        const receitaValor = +document.getElementById("receita").value;
+        const custosValor = +document.getElementById("custos").value;
+        const despesasValor = +document.getElementById("despesas").value;
+        const tipo = document.getElementById("tipo").value;
+
+        const tabela = document.getElementById("resultado");
+        tabela.innerHTML = "";
+
+        for (let ano = 2025; ano <= 2033; ano++) {
+
+            const cbsAno = document.getElementById(`cbs_${ano}`)?.value || 0;
+            const ibsAno = document.getElementById(`ibs_${ano}`)?.value || 0;
+
+            const t = calcularTributos(
+                ano,
+                receitaValor,
+                custosValor,
+                despesasValor,
+                tipo,
+                +cbsAno,
+                +ibsAno
+            );
+
+            const fco = receitaValor - custosValor - despesasValor - t.total;
+
+            tabela.innerHTML += `
+            <tr>
+                <td>${ano}</td>
+                <td>R$ ${t.icms_iss.toFixed(2)}</td>
+                <td>R$ ${t.pis_cofins.toFixed(2)}</td>
+                <td>R$ ${t.ibs.toFixed(2)}</td>
+                <td>R$ ${t.cbs.toFixed(2)}</td>
+                <td>R$ ${t.total.toFixed(2)}</td>
+                <td>R$ ${fco.toFixed(2)}</td>
+            </tr>
+        `;
+        }
+    }
+</script>
+
+</body>
+
+</html>

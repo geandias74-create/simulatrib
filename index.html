@@ -5,174 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="testes.js"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Simula Trib</title>
-
-    <style>
-
-        body {
-            font-family: Arial, sans-serif;
-            padding: 0;
-            margin: 0;
-        }
-
-        .logo img {
-            height: 100px;
-            width: auto;
-            margin-left: 10px;
-        }
-
-        .back video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            z-index: -1;
-            opacity: 0.5;
-        }
-
-        header {
-            position: fixed;
-            top: 2px;
-            width: 100%;
-            background: #003366;
-            z-index: 10;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        nav {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            margin-top: 150px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            background: #f7f5f588;
-            padding: 25px;
-            border-radius: 8px;
-        }
-
-        .objetivo img {
-            display: block;
-            margin: auto;
-            max-width: 100%;
-            height: auto;
-            align-items: center;
-        }
-
-
-        .contribuicao img {
-            display: block;
-            margin: auto;
-            max-width: 100%;
-            height: auto;
-            align-items: center;
-            margin-top: 10%;
-        }
-
-        .historico img {
-            display: block;
-            margin: auto;
-            max-width: 100%;
-            height: auto;
-            align-items: center;
-            margin-top: 10%;
-        }
-
-        .grafico img {
-            display: block;
-            margin: auto;
-            max-width: 100%;
-            height: auto;
-            align-items: center;
-        }
-
-        h1,
-        h2 {
-            text-align: center;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        .spacer {
-            height: 73px;
-        }
-
-        input,
-        select {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 15px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #003366;
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 25px;
-            font-size: 13px;
-            overflow-x: auto;
-        }
-
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background: #003366;
-            color: white;
-        }
-
-        footer {
-            background: #003366;
-            color: #fff;
-            padding: 25px 15px;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -197,13 +31,11 @@
     <main>
 
         <section id="sobre" class="container">
-            <h1>1. Sobre a Ferramenta</h1>
-
             <section>
                 <div class="objetivo">
                     <img src="./midia/imagens/objetivo.png" alt="">
                 </div>
-                <h2>1.1. Objetivo</h2>
+                <h2>Objetivo</h2>
                 <p>
                     Analisar os impactos econômicos e financeiros da Reforma Tributária sobre o Consumo no fluxo de
                     caixa operacional das empresas, com foco no longo do período de transição (2026–2033), considerando
@@ -215,7 +47,7 @@
                 <div class="contribuicao">
                     <img src="./midia/imagens/contribuição.png" alt="">
                 </div>
-                <h2>1.2. Contribuição Prática para Sociedade</h2>
+                <h2>Contribuição Prática para Sociedade</h2>
                 <p>
                     Facilitar a compreensão e a tomada de decisão dos usuários da informação contábil sobre a gestão de
                     caixa em um contexto de transição normativa.
@@ -226,118 +58,32 @@
                 <div class="historico">
                     <img src="./midia/imagens/tempo.png" alt="">
                 </div>
-                <h2>1.3. Breve Resumo Sobre as Etapas da Reforma</h2>
+                <h2>Breve Resumo Sobre as Etapas da Reforma</h2>
 
-                <!-- 1.3.1. Tributação atual -->
-                <h3>1.3.1. Tributação atual de PIS, COFINS, ICMS e ISS (empresas no regime não‑cumulativo — Pará/Belém)
-                </h3>
+                <div class="carousel">
 
-                <p>
-                    No Brasil, empresas que adotam o regime não‑cumulativo apuram créditos nas etapas anteriores da
-                    cadeia produtiva para reduzir o imposto a pagar, resultando em maior neutralidade tributária.
-                </p>
+                    <button class="carousel-btn prev" onclick="mudarSlide(-1)">❮</button>
 
-                <h4>PIS e COFINS</h4>
-                <p>
-                    No regime não‑cumulativo, aplicam‑se alíquotas federais sobre a receita bruta de:
-                    <br>PIS: 1,65%
-                    <br>COFINS: 7,60%
-                </p>
-                <p>
-                    Esses tributos permitem a apropriação de créditos sobre insumos, reduzindo a carga efetiva de
-                    impostos sobre o consumo final.
-                </p>
+                    <div class="carousel-track">
 
-                <h4>ICMS (Pará)</h4>
-                <p>
-                    O Imposto sobre Circulação de Mercadorias e Serviços é um tributo estadual que incide sobre a venda
-                    de mercadorias e alguns serviços.
-                </p>
-                <p>
-                    No estado do Pará, a alíquota interna típica é 19% das operações internas.
-                </p>
+                        <div class="slide active">
+                            <img src="./midia/imagens/Fase 1 - Pré-Reforma.png" alt="Tributação atual">
+                        </div>
 
-                <h4>ISS (Belém)</h4>
-                <p>
-                    O Imposto sobre Serviços de Qualquer Natureza é devido ao município sobre serviços prestados.
-                </p>
-                <p>
-                    Em Belém (PA), a alíquota normalmente aplicada pode atingir 5% sobre o valor dos serviços.
-                </p>
+                        <div class="slide">
+                            <img src="./midia/imagens/Fase 2 - Transição.png" alt="Transição CBS IBS">
+                        </div>
 
-                <p>
-                    Esses tributos são cobrados separadamente pelas esferas federal (PIS/COFINS), estadual (ICMS) e
-                    municipal (ISS), gerando um sistema complexo de apuração e créditos.
-                </p>
+                        <div class="slide">
+                            <img src="./midia/imagens/Fase 3 - Consolidação IVA Dual.png" alt="CBS e IBS consolidados">
+                        </div>
 
-                <!-- 1.3.2. Mudança tributária -->
-                <h3>1.3.2. Mudança tributária prevista na Reforma — transição CBS e IBS (2026–2032)</h3>
+                    </div>
 
-                <p>
-                    A reforma tributária em curso no Brasil propõe a substituição dos tributos atuais por dois grandes
-                    tributos sobre o valor agregado (IVA): CBS na esfera federal e IBS nos estados e municípios, com
-                    transição gradual de 2026 a 2033.
-                </p>
+                    <button class="carousel-btn next" onclick="mudarSlide(1)">></button>
 
-                <h4>2026 — ano de teste</h4>
-                <p>
-                    Neste ano, os novos tributos começam a ser testados:
-                    <br>CBS: alíquota de 0,9%
-                    <br>IBS: alíquota de 0,1%
-                </p>
-                <p>
-                    Esses valores servem para calibrar o sistema e podem ser compensados com o PIS e a COFINS
-                    existentes.
-                </p>
+                </div>
 
-                <h4>2027 — extinção de PIS e COFINS</h4>
-                <p>
-                    O PIS e a COFINS são extintos definitivamente.
-                    <br>A CBS passa a ser cobrada pela alíquota integral definida por lei.
-                    <br>O IBS permanece em taxa simbólica para testes.
-                </p>
-
-                <h4>2029–2032 — transição de ICMS/ISS para IBS</h4>
-                <p>
-                    A reforma prevê a redução gradual das alíquotas de ICMS e ISS enquanto o IBS cresce
-                    proporcionalmente:
-                    <br>2029: redução de 10% nas alíquotas do ICMS/ISS e aumento de 10% no IBS.
-                    <br>2030: redução de 20% no ICMS/ISS e aumento de 20% do IBS.
-                    <br>2031: redução de 30% no ICMS/ISS e aumento de 30% no IBS.
-                    <br>2032: redução de 40% no ICMS/ISS; o IBS continua a crescer conforme o calendário legal antes de
-                    sua alíquota cheia.
-                </p>
-                <p>
-                    Essa transição progressiva permite ajuste do sistema sem rupturas bruscas de arrecadação.
-                </p>
-
-                <!-- 1.3.3. CBS e IBS consolidados -->
-                <h3>1.3.3. CBS e IBS consolidados: alíquotas cheias e o novo IVA Dual</h3>
-
-                <h4>CBS — Contribuição sobre Bens e Serviços</h4>
-                <p>
-                    Substitui PIS, COFINS e IPI (federais). Aplicada de forma ampla sobre bens e serviços com uma única
-                    alíquota federal referência que será fixada por lei complementar para manter a arrecadação atual.
-                    Seu papel é simples: tributar o valor agregado nacionalmente com crédito em todas as etapas.
-                </p>
-
-                <h4>IBS — Imposto sobre Bens e Serviços</h4>
-                <p>
-                    Substitui ICMS (estadual) e ISS (municipal) gradualmente até 2033.
-                    O IBS será de competência estadual/municipal e também baseado no valor agregado, permitindo crédito
-                    total.
-                    A alíquota de referência ainda está em discussão, mas há expectativas de que em cenários de
-                    referência ela fique em uma faixa superior a 17%, combinada entre estados e municípios.
-                </p>
-
-                <h4>Imposto sobre Valor Adicionado Dual</h4>
-                <p>
-                    Essa estrutura — com CBS no nível federal e IBS no subnacional — representa um IVA abrangente que
-                    unifica tributos dispersos, com maior neutralidade e alinhamento ao padrão internacional de IVA
-                    (valor agregado não cumulativo).
-                    Esse modelo visa reduzir complexidade, eliminar a cumulatividade dos tributos atuais e combinar
-                    arrecadação eficiente com menos distorções econômicas.
-                </p>
             </section>
         </section>
 
@@ -347,9 +93,9 @@
                 <img src="./midia/imagens/grafico.png" alt="">
             </div>
 
-            <h1>2. Simulação de Impactos da Reforma Tributária Sobre o Consumo (2026 – 2033)</h1>
+            <h1>Simulação de Impactos da Reforma Tributária Sobre o Consumo (2026 – 2033)</h1>
 
-            <h2>Dados Anuais da Empresa</h2>
+            <h2>Dados Anuais</h2>
 
             <label>Tipo de Faturamento</label>
             <select id="tipo">
@@ -482,7 +228,7 @@
     </main>
 
     <footer id="contato">
-        <p><strong>Por:</strong> Cledson Gean Dias Guimarães | 📧 e-mail: geandias74@gmail.com</p>
+        <p><strong>Por:</strong>Cledson Gean Dias Guimarães | 📧 e-mail: geandias74@gmail.com</p>
         <p> Simula Trib | 2026 | © Todos os direitos reservados.</p>
     </footer>
 

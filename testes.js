@@ -29,7 +29,7 @@ function mudarSlide(direcao) {
 
 
 
-function calcularTributos(ano, receita, custos, despesas, tipo, cbsAno, ibsAno) {
+function calcularTributos(ano, receita, gastos, percentual, tipo, cbsAno, ibsAno) {
 
     let icms = tipo === "vendas" ? 0.19 : 0;
     let iss = tipo === "servicos" ? 0.05 : 0;
@@ -55,7 +55,7 @@ function calcularTributos(ano, receita, custos, despesas, tipo, cbsAno, ibsAno) 
 
     if (ano >= 2029 && ano <= 2032) {
         let fator = (ano - 2028) * 0.10;
-        let baseIBS = (receita - custos - despesas);
+        let baseIBS = (receita - (gastos * fatorcredito));
 
         ibs = (ibsAno * fator);
         icms *= (1 - fator);
@@ -70,13 +70,13 @@ function calcularTributos(ano, receita, custos, despesas, tipo, cbsAno, ibsAno) 
         cbs = cbsAno;
     }
 
-    const debICMS_ISS = receita * (icms + iss);
+    const debICMS_ISS = (receita * icms) + (receita * iss);
     const debPIS = (receita - receita * 0.19) * pis;
     const debCOFINS = (receita - receita * 0.19) * cofins;
     const debIBS = receita * ibs;
     const debCBS = receita * cbs;
 
-    const baseCred = custos + despesas;
+    const baseCred = gastos * percentual;
 
     const credPIS = baseCred * pis;
     const credCOFINS = baseCred * cofins;
@@ -117,8 +117,8 @@ function calcularTributos(ano, receita, custos, despesas, tipo, cbsAno, ibsAno) 
 function simular() {
 
     const receitaValor = +document.getElementById("receita").value;
-    const custosValor = +document.getElementById("custos").value;
-    const despesasValor = +document.getElementById("despesas").value;
+    const custosValor = +document.getElementById("gastos").value;
+    const percentual = +document.getElementById("fatorcredito").value
     const tipo = document.getElementById("tipo").value;
 
     const tabela = document.getElementById("resultado");
@@ -133,13 +133,13 @@ function simular() {
             ano,
             receitaValor,
             custosValor,
-            despesasValor,
+            percentual,
             tipo,
             +cbsAno,
             +ibsAno
         );
 
-        const fco = receitaValor - custosValor - despesasValor - t.total;
+        const fco = receitaValor - (custosValor * percentual) - t.total;
 
         tabela.innerHTML += `
             <tr>

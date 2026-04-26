@@ -12,7 +12,7 @@ body {
 .logo img {
     height: 100px;
     width: auto;
-    margin-left: 15px;
+    margin: 0;
 }
 
 .back video {
@@ -64,7 +64,8 @@ main {
 }
 
 .container {
-    max-width: 70vw;
+    max-width: 900px;
+    width: 90%;
     margin: 40px auto;
     background: #f7f5f534;
     padding: 25px;
@@ -109,17 +110,11 @@ main {
 .carousel {
     position: relative;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 20px auto;
     overflow: hidden;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.4s ease;
-}
-
 .slide {
-    min-width: 100%;
     display: none;
 }
 
@@ -156,12 +151,12 @@ main {
 
 h1, h2 {
     text-align: center;
-    font-size: 3vh;
+    font-size: clamp(30px, 2vw, 20px);
 }
 
 p {
     line-height: 1.6;
-    font-size: 2vh;
+    font-size: clamp(16px, 2vw, 20px);
     display: flex;
     justify-content: center;
 }
@@ -191,12 +186,14 @@ button {
     cursor: pointer;
 }
 
-table {
+.table-wrapper {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
-    font-size: 15px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    min-width: 600px;
 }
 
 .container table{
@@ -222,3 +219,55 @@ footer {
     padding: 25px 15px;
     text-align: center;
 }
+
+/*responsividade*/
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 8px 0;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+
+    h1, h2 {
+        font-size: clamp(20px, 5vw, 30px);
+    }
+
+    p {
+        display: block;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px 10px;
+    }
+
+    input,
+    select {
+        box-sizing: border-box;
+    }
+
+    .grid-aliquotas {
+        grid-template-columns: 1fr !important;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+}
+
+

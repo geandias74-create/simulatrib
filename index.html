@@ -62,25 +62,25 @@
 
                 <div class="carousel">
 
-                    <button class="carousel-btn prev" onclick="mudarSlide(-1)">❮</button>
+                    <button class="carousel-btn prev" onclick="mudarSlide(1)">❮</button>
 
                     <div class="carousel-track">
 
                         <div class="slide active">
-                            <img src="./midia/imagens/Fase 1 - Pré-Reforma.png" alt="Tributação atual">
+                            <img src="./midia/imagens/Fase 1 - Pré-Reforma.png" alt="fase 1">
                         </div>
 
                         <div class="slide">
-                            <img src="./midia/imagens/Fase 2 - Transição.png" alt="Transição CBS IBS">
+                            <img src="./midia/imagens/Fase 2 - Transição.png" alt="fase 2">
                         </div>
 
                         <div class="slide">
-                            <img src="./midia/imagens/Fase 3 - Consolidação IVA Dual.png" alt="CBS e IBS consolidados">
+                            <img src="./midia/imagens/Fase 3 - Consolidação IVA Dual.png" alt="fase 3">
                         </div>
 
                     </div>
 
-                    <button class="carousel-btn next" onclick="mudarSlide(1)">></button>
+                    <button class="carousel-btn next" onclick="mudarSlide(-1)">></button>
 
                 </div>
 
@@ -106,15 +106,19 @@
             <label>Receita Bruta (R$)</label>
             <input type="number" id="receita" value="100000">
 
-            <label>Custos Operacionais (R$)</label>
-            <input type="number" id="custos" value="60000">
+            <label>Gastos (R$)</label>
+            <input type="number" id="gastos" value="60000">
 
-            <label>Despesas Essenciais (R$)</label>
-            <input type="number" id="despesas" value="10000">
+            <label>Fator de Creditamento (%)</label>
+            <select id="fatorcredito">
+                <option value="0.6">60%</option>
+                <option value="0.4" selected>40%</option>
+                <option value="0.2">20%</option>
+            </select>
 
             <h2>Alíquotas Estimadas</h2>
 
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+            <div class="grid-aliquotas" style="display:grid; grid-template-columns: 1fr 1fr; gap:5px">
 
                 <!-- CBS -->
                 <div>
@@ -208,27 +212,28 @@
 
             <button onclick="simular()">Simular Cenários</button>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ano</th>
-                        <th>ICMS / ISS Líquido (R$)</th>
-                        <th>PIS/COFINS<br>Líquido (R$)</th>
-                        <th>IBS<br>Líquido (R$)</th>
-                        <th>CBS<br>Líquido (R$)</th>
-                        <th>Tributos Totais (R$)</th>
-                        <th>Fluxo de Caixa Operacional (R$)</th>
-                    </tr>
-                </thead>
-                <tbody id="resultado"></tbody>
-            </table>
-
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>ICMS / ISS Líquido (R$)</th>
+                            <th>PIS/COFINS<br>Líquido (R$)</th>
+                            <th>IBS<br>Líquido (R$)</th>
+                            <th>CBS<br>Líquido (R$)</th>
+                            <th>Tributos Totais (R$)</th>
+                            <th>Fluxo de Caixa Operacional (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado"></tbody>
+                </table>
+            </div>
         </section>
 
     </main>
 
     <footer id="contato">
-        <p><strong>Por:</strong>Cledson Gean Dias Guimarães | 📧 e-mail: geandias74@gmail.com</p>
+        <p>Site desenvolvido por: Cledson Gean Dias Guimarães | 📧 e-mail: geandias74@gmail.com</p>
         <p> Simula Trib | 2026 | © Todos os direitos reservados.</p>
     </footer>
 
